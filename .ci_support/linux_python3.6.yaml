@@ -10,8 +10,6 @@ docker_image:
 - condaforge/linux-anvil-comp7
 fortran_compiler:
 - gfortran
-hdf5:
-- 1.10.4
 icu:
 - '58'
 numpy:

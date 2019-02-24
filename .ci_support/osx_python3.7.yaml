@@ -12,8 +12,6 @@ fortran_compiler:
 - gfortran
 fortran_compiler_version:
 - '4'
-hdf5:
-- 1.10.4
 icu:
 - '58'
 macos_machine:

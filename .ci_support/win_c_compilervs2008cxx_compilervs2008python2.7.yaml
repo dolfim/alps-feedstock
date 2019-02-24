@@ -8,8 +8,6 @@ cxx_compiler:
 - vs2008
 fortran_compiler:
 - flang
-hdf5:
-- 1.10.4
 numpy:
 - '1.11'
 pin_run_as_build:
