@@ -42,7 +42,7 @@ requirements:
     - python
     - numpy
     - scipy
-    - hdf5
+    - hdf5 1.8.*
     - vs2008_express_vc_python_patch  # [win]
   run:
     - icu 58.*              # [unix]
@@ -51,7 +51,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - scipy
     - matplotlib
-    - hdf5
+    - hdf5 1.8.*
     - blas 1.* {{blas}}     # [not win]
 
 test:
