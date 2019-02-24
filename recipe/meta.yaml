@@ -22,7 +22,7 @@ source:
     - boost_defs.patch  # [win]
 
 build:
-  # skip: true  # [not py27]
+  skip: true  # [py37]
   number: 1005
   binary_relocation: False  # [osx]
   detect_binary_files_with_prefix: True
@@ -45,7 +45,7 @@ requirements:
     - hdf5 1.8.*
     - vs2008_express_vc_python_patch  # [win]
   run:
-    - icu 58.*              # [unix]
+    - icu             # [unix]
     - boost 1.65.1
     - python
     - {{ pin_compatible('numpy') }}
