@@ -22,45 +22,37 @@ source:
     - boost_defs.patch  # [win]
 
 build:
-  skip: true  # [not py27]
-  number: 5
+  # skip: true  # [not py27]
+  number: 1005
   binary_relocation: False  # [osx]
   detect_binary_files_with_prefix: True
   features:
     - blas_{{blas}}     # [not win]
-    - vc9               # [win and py27]
-    - vc14              # [win and py35]
 
 
 requirements:
   build:
-    - toolchain
     - cmake
-    - icu 58.*              # [unix]
+    - {{ compiler('fortran') }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - icu  # [unix]
     - boost 1.65.1
     - python
-    - numpy 1.8.*  # [not (win and (py35 or py36))]
-    - numpy 1.9.*  # [win and py35]
-    - numpy 1.11.*  # [win and py36]
+    - numpy
     - scipy
-    - hdf5 1.10.1
-    - blas 1.* {{blas}}     # [not win]
-    - vc 9                  # [win and py27]
-    - vc 14                 # [win and py35]
+    - hdf5
     - vs2008_express_vc_python_patch  # [win]
   run:
     - icu 58.*              # [unix]
     - boost 1.65.1
     - python
-    - numpy >=1.8  # [not (win and (py35 or py36))]
-    - numpy >=1.9  # [win and py35]
-    - numpy >=1.11  # [win and py36]
+    - {{ pin_compatible('numpy') }}
     - scipy
     - matplotlib
-    - hdf5 1.10.1
+    - hdf5
     - blas 1.* {{blas}}     # [not win]
-    - vc 9                  # [win and py27]
-    - vc 14                 # [win and py35]
 
 test:
   commands:
