@@ -22,7 +22,7 @@ source:
     - boost_defs.patch  # [win]
 
 build:
-  skip: true  # [py37]
+  # skip: true  # [py37]
   number: 1005
   binary_relocation: False  # [osx]
   detect_binary_files_with_prefix: True
