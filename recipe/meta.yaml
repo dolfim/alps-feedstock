@@ -43,6 +43,7 @@ requirements:
     - numpy
     - scipy
     - hdf5
+    - blas 1.* {{blas}}     # [not win]
     - vs2008_express_vc_python_patch  # [win]
   run:
     - icu             # [unix]
