@@ -16,9 +16,9 @@ function num_cores {
 
 function cxx_flags {
   if [[ `uname -s` == "Darwin" ]]; then
-    echo "-std=c++11 -stdlib=libc++"
+    echo "-std=c++14 -stdlib=libc++"
   else
-    echo "-std=c++11"
+    echo "-std=c++14"
   fi
 }
 
