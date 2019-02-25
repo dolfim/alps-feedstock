@@ -38,20 +38,20 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - icu  # [unix]
-    - boost 1.65.1
+    - boost
     - python
     - numpy
     - scipy
-    - hdf5 1.8.*
+    - hdf5
     - vs2008_express_vc_python_patch  # [win]
   run:
     - icu             # [unix]
-    - boost 1.65.1
+    - boost
     - python
     - {{ pin_compatible('numpy') }}
     - scipy
     - matplotlib
-    - hdf5 1.8.*
+    - hdf5
     - blas 1.* {{blas}}     # [not win]
 
 test:
